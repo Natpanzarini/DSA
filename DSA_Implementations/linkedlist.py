@@ -1,13 +1,24 @@
 # Implementation for a singly linked list.
-class Node():
+class SNode():
     def __init__(self):
         self.val = 0
         self.next = None
 
+#Implementation for a doubly linked list
+class DNode():
+    def __init__(self):
+        self.val = 0
+        self.next = None      
+        self.prev = None
+
 class SLinkedList():
     def __init__(self):
-        self.head = Node()
+        self.head = SNode()
 
+class DLinkedList():
+    def __init__(self):
+        self.head = DNode()
+        
 def testList():
     # Test initialization of the head of the LL.
     list = SLinkedList()
@@ -15,7 +26,7 @@ def testList():
     # Test assigning a value to the head of the list
     list.head.val = 69
     print(list.head.val)
-    node2 = Node()
+    node2 = SNode()
     list.head.next = node2
 
     # Test adding another node to linked list
